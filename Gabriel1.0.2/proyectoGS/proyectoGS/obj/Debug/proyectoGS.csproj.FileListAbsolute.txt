@@ -1,0 +1,13 @@
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\bin\Debug\proyectoGS.exe.config
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\bin\Debug\proyectoGS.exe
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\bin\Debug\proyectoGS.pdb
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.AssemblyReference.cache
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.SuggestedBindingRedirects.cache
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Form1.resources
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Properties.Resources.resources
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.GenerateResource.cache
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.CoreCompileInputs.cache
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.exe
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.pdb
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.pacientes.resources
+D:\noteboock\ProyectosPersonales\Gabriel1.0.2\proyectoGS\proyectoGS\bin\Debug\pacientes.accdb

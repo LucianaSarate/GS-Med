@@ -63,6 +63,16 @@ namespace proyectoGS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5ede32d3ee46d18677adac1dc2f3a5d7 {
+            get {
+                object obj = ResourceManager.GetObject("5ede32d3ee46d18677adac1dc2f3a5d7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _65b0b1f84b1cc8a72b0f31c31877ab2c {
             get {
                 object obj = ResourceManager.GetObject("65b0b1f84b1cc8a72b0f31c31877ab2c", resourceCulture);

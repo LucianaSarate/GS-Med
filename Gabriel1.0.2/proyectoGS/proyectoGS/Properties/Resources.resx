@@ -130,4 +130,7 @@
   <data name="Capa 0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Capa 0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5ede32d3ee46d18677adac1dc2f3a5d7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5ede32d3ee46d18677adac1dc2f3a5d7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -18,6 +18,8 @@ namespace proyectoGS.Pantallas.Consulta
         NpgsqlCommand command = new NpgsqlCommand();
         private NpgsqlDataAdapter adaptador;
         private DataSet datos;
+        string nombre = "";
+        string apellido = "";
         public consulta()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace proyectoGS.Pantallas.Consulta
                 // Concatena nombre y apellido antes de asignar a DisplayMember
                 datos.Tables["pacientes"].Columns.Add("nombre_completo", typeof(string), "nombre + ' ' + apellido");
 
+
                 // Asigna el DataSet como fuente de datos para el ComboBox
                 comboBox1.DataSource = datos.Tables["pacientes"];
                 comboBox1.DisplayMember = "nombre_completo"; // Columna que se mostrará en el ComboBox
@@ -80,20 +83,20 @@ namespace proyectoGS.Pantallas.Consulta
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string l = comboBox1.Text;
+            int l = comboBox1.SelectedIndex;
             try
             {
                 conexion.Open();
                 command.Connection = conexion;
 
-                command.CommandText = "SELECT idPaciente FROM pacientes WHERE nombreapellido = '" + comboBox1.Text + "'";
-                object result = command.ExecuteScalar();
+                //command.CommandText = "SELECT nombre, apellido FROM pacientes WHERE idpaciente = '" + l + "'";
+                //object result = command.ExecuteScalar();
 
 
-                if (result != null && result != DBNull.Value)
+                if (l!=0)//result != null && result != DBNull.Value)
                 {
 
-                    int idPaciente = Convert.ToInt32(result);
+                   // int idPaciente = Convert.ToInt32(result);
 
                    
 
@@ -101,13 +104,14 @@ namespace proyectoGS.Pantallas.Consulta
                     command.CommandText = "INSERT INTO public.consultas(idpaciente, fecha, motivo, observaciones)" +
                         "VALUES (@idPaciente, @fechaConsulta, @motivo, @observaciones)";
 
-                    command.Parameters.AddWithValue("@idPaciente", idPaciente);
+                    command.Parameters.AddWithValue("@idPaciente", l);
                     command.Parameters.AddWithValue("@fechaConsulta", DateTime.Parse( label3.Text));
                     command.Parameters.AddWithValue("@motivo", txtDiag.Text);
                     command.Parameters.AddWithValue("@observaciones", txtObser.Text);
 
                     valid();
 
+                    
 
                 }
                 else
@@ -153,27 +157,21 @@ namespace proyectoGS.Pantallas.Consulta
                 MessageBox.Show("Los datos se guardaron correctamente");
                 LimpiarCampos();
                 command.Parameters.Clear();
-                comboBox1.Enabled = true;
+                comboBox1.SelectedIndex = 0;
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            int idPaciente = comboBox1.SelectedIndex;
             try
             {
-                using (NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=1234;Database=medicinaChina"))
-                {
-                    conexion.Open();
-                    using (NpgsqlCommand command = new NpgsqlCommand())
-                    {
-                        command.Connection = conexion;
-                        command.CommandText = "SELECT idPaciente FROM pacientes WHERE nombreapellido = '" + comboBox1.Text + "'";
-                        int idPaciente = Convert.ToInt32(command.ExecuteScalar());
+               
+                       
 
                         pacienteEditar formulario2 = new pacienteEditar(idPaciente);
                         formulario2.Show();
-                    }
-                }
+                 
             }
             catch (Exception ex)
             {
@@ -192,19 +190,11 @@ namespace proyectoGS.Pantallas.Consulta
         {
             try
             {
-                using (NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=1234;Database=medicinaChina"))
-                {
-                    conexion.Open();
-                    using (NpgsqlCommand command = new NpgsqlCommand())
-                    {
-                        command.Connection = conexion;
-                        command.CommandText = "SELECT idPaciente FROM pacientes WHERE nombreapellido = '" + comboBox1.Text + "'";
-                        int idPaciente = Convert.ToInt32(command.ExecuteScalar());
+                int idPaciente = comboBox1.SelectedIndex;
 
-                        Historial formulario2 = new Historial(idPaciente);
+                Historial formulario2 = new Historial(idPaciente);
                         formulario2.Show();
-                    }
-                }
+                   
             }
             catch (Exception ex)
             {
@@ -227,14 +217,34 @@ namespace proyectoGS.Pantallas.Consulta
        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
-            { comboBox1.Enabled = true; }
-            else { comboBox1.Enabled = false; }
+            { 
+                comboBox1.Enabled = true;
+                btnBuscar.Enabled = false;   
+                btnHistorial.Enabled = false;
+                txtDiag.Enabled = false;
+                txtObser.Enabled = false;
+                btnGuardar.Enabled = false;
+                btnCancelar.Enabled = false;
+                bntNuevo.Enabled = true;
+            }
+            else { 
+                comboBox1.Enabled = false;
+                btnBuscar.Enabled = true;
+                btnHistorial.Enabled = true;
+                txtDiag.Enabled = true;
+                txtObser.Enabled = true;
+                btnGuardar.Enabled = true;
+                btnCancelar.Enabled = true;
+                bntNuevo.Enabled = false;
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             LlenarComboBox();
         }
+
+       
     }
    
 }

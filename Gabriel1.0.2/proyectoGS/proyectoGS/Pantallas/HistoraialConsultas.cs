@@ -44,19 +44,30 @@ namespace proyectoGS.Pantallas
             try
             {
                 // Abre la conexión a la base de datos
-                conexion.Open();
-
-                // Crea un adaptador y un DataSet para almacenar los datos
-                adaptador = new NpgsqlDataAdapter("SELECT idpaciente, nombreapellido FROM pacientes", conexion);
+                adaptador = new NpgsqlDataAdapter("SELECT idpaciente, nombre, apellido FROM pacientes", conexion);
                 datos = new DataSet();
 
                 // Llena el DataSet con los datos de la base de datos
                 adaptador.Fill(datos, "pacientes");
 
+                // Agrega una fila al inicio con un valor predeterminado
+                DataRow row = datos.Tables["pacientes"].NewRow();
+                row["idpaciente"] = DBNull.Value; // Puedes usar DBNull.Value o algún valor específico según tu lógica
+                row["nombre"] = DBNull.Value;
+                row["apellido"] = DBNull.Value;
+                datos.Tables["pacientes"].Rows.InsertAt(row, 0);
+
+                // Concatena nombre y apellido antes de asignar a DisplayMember
+                datos.Tables["pacientes"].Columns.Add("nombre_completo", typeof(string), "nombre + ' ' + apellido");
+
                 // Asigna el DataSet como fuente de datos para el ComboBox
                 comboBox1.DataSource = datos.Tables["pacientes"];
-                comboBox1.DisplayMember = "nombreapellido"; // Columna que se mostrará en el ComboBox
+                comboBox1.DisplayMember = "nombre_completo"; // Columna que se mostrará en el ComboBox
                 comboBox1.ValueMember = "idpaciente";       // Valor asociado a la selección
+
+                // Configura el modo de autocompletar y la fuente de autocompletar del ComboBox
+                comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ex)
             {
@@ -77,9 +88,10 @@ namespace proyectoGS.Pantallas
                 {
                     conexion.Open();
 
-                    using (NpgsqlCommand comandoIdPaciente = new NpgsqlCommand("SELECT idPaciente FROM pacientes WHERE nombreapellido = '" + comboBox1.Text + "'", conexion))
+
+                    using (NpgsqlCommand comandoIdPaciente = new NpgsqlCommand("SELECT idPaciente FROM pacientes WHERE nombre = @nombre AND apellido = @apellido", conexion))
                     {
-                        int idPaciente = Convert.ToInt32(comandoIdPaciente.ExecuteScalar());
+                        int idPaciente = comboBox1.SelectedIndex;
 
                         using (NpgsqlCommand comandoConsulta = new NpgsqlCommand("SELECT fecha, motivo, observaciones FROM consultas WHERE idPaciente = " + idPaciente, conexion))
                         {

@@ -23,6 +23,7 @@ namespace proyectoGS.Pantallas.Consulta
             InitializeComponent();
             this.numero = numero;
             txtNombre.Enabled = false;
+            textApellido.Enabled = false;   
             dtpFecha.Enabled = false;
             txtTelefono.Enabled = false;
             txtDireccion.Enabled = false;
@@ -45,13 +46,14 @@ namespace proyectoGS.Pantallas.Consulta
                 conexion.Open();
 
                 command.Connection = conexion;
-                command.CommandText = "SELECT nombreapellido, fecha_nacimiento, telefono, direccion, ocupacion, descripcionOcupacion , peso, medicamentos_que_toma, otras_terapias, operaciones, metales_en_el_cuerpo, otros_problemas FROM pacientes WHERE idPaciente = '" + numero + "'";
+                command.CommandText = "SELECT nombre ,apellido, fecha_nacimiento, telefono, direccion, ocupacion, descripcionOcupacion , peso, medicamentos_que_toma, otras_terapias, operaciones, metales_en_el_cuerpo, otros_problemas FROM pacientes WHERE idPaciente = '" + numero + "'";
                 using (NpgsqlDataReader reader = command.ExecuteReader())
                 {
                     if (reader.Read())
                     {
                         // Asignar los valores a los controles
-                        txtNombre.Text = reader["nombreapellido"].ToString();
+                        txtNombre.Text = reader["nombre"].ToString();
+                        textApellido.Text = reader["apellido"].ToString();
                         dtpFecha.Value = Convert.ToDateTime(reader["fecha_nacimiento"]);
                         txtTelefono.Text = reader["telefono"].ToString();
                         txtDireccion.Text = reader["direccion"].ToString();
@@ -80,6 +82,7 @@ namespace proyectoGS.Pantallas.Consulta
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtNombre.Enabled = true;
+            textApellido.Enabled = true;
             dtpFecha.Enabled = true;
             txtTelefono.Enabled = true;
             txtDireccion.Enabled = true;
@@ -105,13 +108,14 @@ namespace proyectoGS.Pantallas.Consulta
 
                 // Actualizar en la tabla 'pacientes'
                 command.CommandText = "UPDATE public.pacientes" +
-                    " SET nombreapellido = @nombre, fecha_nacimiento = @fechaNacimiento, " +
+                    " SET nombre = @nombre,  apellido = @apellido,fecha_nacimiento = @fechaNacimiento, " +
                     "telefono = @telefono, direccion = @direccion, ocupacion = @ocupacion, descripcionocupacion = @descripcionOcupacion, " +
                     "peso = @peso, medicamentos_que_toma = @medicamentos, otras_terapias = @otrasTerapias, operaciones = @operaciones, " +
                     "metales_en_el_cuerpo = @metales, otros_problemas = @otrosProblemas" +
                     " WHERE idpaciente = @numero";
 
                 command.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                command.Parameters.AddWithValue("@apellido", textApellido.Text);
                 command.Parameters.AddWithValue("@fechaNacimiento", dtpFecha.Value);
                 command.Parameters.AddWithValue("@telefono", txtTelefono.Text);
                 command.Parameters.AddWithValue("@direccion", txtDireccion.Text);

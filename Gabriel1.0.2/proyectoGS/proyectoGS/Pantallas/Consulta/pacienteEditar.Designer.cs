@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.textApellido = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -192,6 +193,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textApellido);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtPeso);
             this.groupBox1.Controls.Add(this.txtOcupacion2);
@@ -233,7 +235,7 @@
             this.txtPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPeso.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
-            this.txtPeso.Location = new System.Drawing.Point(591, 36);
+            this.txtPeso.Location = new System.Drawing.Point(819, 36);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(82, 31);
             this.txtPeso.TabIndex = 2;
@@ -310,7 +312,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(527, 39);
+            this.label7.Location = new System.Drawing.Point(755, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 22);
             this.label7.TabIndex = 6;
@@ -405,6 +407,14 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // textApellido
+            // 
+            this.textApellido.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textApellido.Location = new System.Drawing.Point(518, 36);
+            this.textApellido.Name = "textApellido";
+            this.textApellido.Size = new System.Drawing.Size(212, 31);
+            this.textApellido.TabIndex = 28;
+            // 
             // pacienteEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,5 +469,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox textApellido;
     }
 }

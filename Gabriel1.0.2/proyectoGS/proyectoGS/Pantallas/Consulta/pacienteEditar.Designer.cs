@@ -237,6 +237,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(82, 31);
             this.txtPeso.TabIndex = 2;
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // txtOcupacion2
             // 
@@ -272,6 +273,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(260, 31);
             this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
@@ -289,7 +291,8 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(162, 25);
             this.dtpFecha.TabIndex = 8;
-            this.dtpFecha.Value = new System.DateTime(2023, 12, 2, 0, 0, 0, 0);
+            this.dtpFecha.Value = new System.DateTime(2023, 12, 10, 0, 0, 0, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // lblEdad
             // 

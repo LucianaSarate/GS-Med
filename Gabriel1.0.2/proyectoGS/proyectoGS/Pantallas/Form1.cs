@@ -61,21 +61,12 @@ namespace proyectoGS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //DialogResult res = MessageBox.Show("Desea salir?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //if (res == DialogResult.Cancel)
-            //{
-            //    e.Cancel = true;
-            //}
-
+            
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) Close();
 
         }
 
-        private void btnPacientes_Click(object sender, EventArgs e)
-        {
-            openForn(new pacientes());
-        }
-
+       
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             openForn(new consulta());

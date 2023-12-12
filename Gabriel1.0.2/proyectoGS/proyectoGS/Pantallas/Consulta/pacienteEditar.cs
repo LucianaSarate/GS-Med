@@ -117,7 +117,7 @@ namespace proyectoGS.Pantallas.Consulta
                 command.Parameters.AddWithValue("@direccion", txtDireccion.Text);
                 command.Parameters.AddWithValue("@ocupacion", txtOcupacion1.Text);
                 command.Parameters.AddWithValue("@descripcionOcupacion", txtOcupacion2.Text);
-                command.Parameters.AddWithValue("@peso", decimal.Parse(txtPeso.Text));
+                command.Parameters.AddWithValue("@peso", txtPeso.Text);
                 command.Parameters.AddWithValue("@medicamentos", txtMedicamentos.Text);
                 command.Parameters.AddWithValue("@otrasTerapias", txtOtrasOperaciones.Text);
                 command.Parameters.AddWithValue("@operaciones", txtOperaciones.Text);
@@ -139,6 +139,45 @@ namespace proyectoGS.Pantallas.Consulta
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaNacimiento = dtpFecha.Value;
+
+            // Obtener la fecha actual
+            DateTime fechaActual = DateTime.Today;
+
+            // Calcular la edad
+            int edad = CalcularEdad(fechaNacimiento, fechaActual);
+
+            // Mostrar la edad en el Label
+            lblEdad.Text = edad.ToString();
+        }
+        private int CalcularEdad(DateTime fechaNacimiento, DateTime fechaActual)
+        {
+            int edad = fechaActual.Year - fechaNacimiento.Year;
+            if (fechaActual.Month < fechaNacimiento.Month || (fechaActual.Month == fechaNacimiento.Month && fechaActual.Day < fechaNacimiento.Day))
+            {
+                edad--;
+            }
+            return edad;
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
+        private void txtPeso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true; // Ignorar la tecla presionada
             }
         }
     }

@@ -6,7 +6,7 @@ CREATE TABLE Pacientes (
     direccion TEXT,
     ocupacion TEXT,
     descripcionOcupacion TEXT,
-    peso DECIMAL(5,2),
+    peso TEXT,
     medicamentos_que_toma TEXT,
     otras_terapias TEXT,
     operaciones TEXT,

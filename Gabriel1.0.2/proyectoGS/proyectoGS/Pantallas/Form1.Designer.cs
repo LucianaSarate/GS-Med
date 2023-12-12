@@ -35,7 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.btnPacientes = new System.Windows.Forms.Button();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +62,6 @@
             this.PanelMenu.Controls.Add(this.pictureBox1);
             this.PanelMenu.Controls.Add(this.btnHistorial);
             this.PanelMenu.Controls.Add(this.btnConsulta);
-            this.PanelMenu.Controls.Add(this.btnPacientes);
             this.PanelMenu.Location = new System.Drawing.Point(0, -1);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(246, 495);
@@ -122,21 +120,6 @@
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
-            // btnPacientes
-            // 
-            this.btnPacientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPacientes.BackColor = System.Drawing.Color.Teal;
-            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacientes.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.Location = new System.Drawing.Point(0, 131);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(246, 32);
-            this.btnPacientes.TabIndex = 2;
-            this.btnPacientes.Text = "PACIENTES";
-            this.btnPacientes.UseVisualStyleBackColor = false;
-            this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +145,6 @@
         private System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Panel panelMostrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -49,7 +49,6 @@ C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyect
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.AssemblyReference.cache
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.SuggestedBindingRedirects.cache
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Form1.resources
-C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.pacientes.resources
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Properties.Resources.resources
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.GenerateResource.cache
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.csproj.CoreCompileInputs.cache
@@ -59,3 +58,5 @@ C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyect
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Pantallas.Consulta.consulta.resources
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Pantallas.Consulta.pacienteEditar.resources
 C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Pantallas.HistoraialConsultas.resources
+C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Pantallas.Consulta.Historial.resources
+C:\Users\lsara\OneDrive\Documentos\GitHub\GS-Med\Gabriel1.0.2\proyectoGS\proyectoGS\obj\Debug\proyectoGS.Pantallas.Consulta.PacienteNuevo.resources

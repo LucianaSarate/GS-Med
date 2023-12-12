@@ -63,6 +63,16 @@ namespace proyectoGS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _57003a56b5f8470651295adb4b7be139_actualizar_signo_de_flecha {
+            get {
+                object obj = ResourceManager.GetObject("57003a56b5f8470651295adb4b7be139-actualizar-signo-de-flecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5ede32d3ee46d18677adac1dc2f3a5d7 {
             get {
                 object obj = ResourceManager.GetObject("5ede32d3ee46d18677adac1dc2f3a5d7", resourceCulture);

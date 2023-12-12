@@ -1,6 +1,6 @@
-﻿namespace proyectoGS
+﻿namespace proyectoGS.Pantallas.Consulta
 {
-    partial class pacientes
+    partial class PacienteNuevo
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -66,22 +65,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtMotivo = new System.Windows.Forms.RichTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtRegistro = new System.Windows.Forms.RichTextBox();
-            this.dtpConsulta = new System.Windows.Forms.DateTimePicker();
-            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.textApellido = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,6 +81,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textApellido);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtPeso);
             this.groupBox1.Controls.Add(this.txtOcupacion2);
@@ -106,10 +99,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(935, 231);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(945, 231);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Del Paciente";
             // 
@@ -130,11 +123,11 @@
             this.txtPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPeso.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
-            this.txtPeso.Location = new System.Drawing.Point(591, 36);
+            this.txtPeso.Location = new System.Drawing.Point(813, 36);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(82, 31);
+            this.txtPeso.Size = new System.Drawing.Size(92, 31);
             this.txtPeso.TabIndex = 2;
-            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress_1);
             // 
             // txtOcupacion2
             // 
@@ -144,7 +137,7 @@
             this.txtOcupacion2.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
             this.txtOcupacion2.Location = new System.Drawing.Point(530, 148);
             this.txtOcupacion2.Name = "txtOcupacion2";
-            this.txtOcupacion2.Size = new System.Drawing.Size(365, 64);
+            this.txtOcupacion2.Size = new System.Drawing.Size(375, 64);
             this.txtOcupacion2.TabIndex = 6;
             this.txtOcupacion2.Text = "";
             // 
@@ -177,7 +170,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(252, 36);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(260, 31);
+            this.txtNombre.Size = new System.Drawing.Size(212, 31);
             this.txtNombre.TabIndex = 1;
             // 
             // dtpFecha
@@ -188,8 +181,8 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(162, 25);
             this.dtpFecha.TabIndex = 8;
-            this.dtpFecha.Value = new System.DateTime(2023, 12, 2, 0, 0, 0, 0);
-            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
+            this.dtpFecha.Value = new System.DateTime(2023, 12, 12, 12, 1, 12, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged_1);
             // 
             // lblEdad
             // 
@@ -207,7 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(527, 39);
+            this.label7.Location = new System.Drawing.Point(740, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 22);
             this.label7.TabIndex = 6;
@@ -278,17 +271,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre y Apellido";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::proyectoGS.Properties.Resources.Capa_0;
-            this.pictureBox1.Location = new System.Drawing.Point(891, 627);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -308,10 +290,10 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(44, 258);
+            this.groupBox2.Location = new System.Drawing.Point(14, 275);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(935, 231);
-            this.groupBox2.TabIndex = 27;
+            this.groupBox2.Size = new System.Drawing.Size(945, 231);
+            this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros Datos";
             // 
@@ -346,6 +328,7 @@
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "SI";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // panel2
             // 
@@ -378,6 +361,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "SI";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // panel1
             // 
@@ -410,6 +394,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "SI";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label10
             // 
@@ -431,7 +416,7 @@
             this.txtOtrasOperaciones.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
             this.txtOtrasOperaciones.Location = new System.Drawing.Point(529, 62);
             this.txtOtrasOperaciones.Name = "txtOtrasOperaciones";
-            this.txtOtrasOperaciones.Size = new System.Drawing.Size(365, 65);
+            this.txtOtrasOperaciones.Size = new System.Drawing.Size(375, 65);
             this.txtOtrasOperaciones.TabIndex = 27;
             this.txtOtrasOperaciones.Text = "";
             // 
@@ -455,7 +440,7 @@
             this.txtTipoProblemas.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
             this.txtTipoProblemas.Location = new System.Drawing.Point(530, 148);
             this.txtTipoProblemas.Name = "txtTipoProblemas";
-            this.txtTipoProblemas.Size = new System.Drawing.Size(365, 65);
+            this.txtTipoProblemas.Size = new System.Drawing.Size(375, 65);
             this.txtTipoProblemas.TabIndex = 24;
             this.txtTipoProblemas.Text = "";
             // 
@@ -513,137 +498,53 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Toma Medicamentos?";
             // 
-            // groupBox3
+            // pictureBox1
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.txtMotivo);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.txtRegistro);
-            this.groupBox3.Controls.Add(this.dtpConsulta);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(44, 508);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(841, 231);
-            this.groupBox3.TabIndex = 28;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Primera Consulta";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(29, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(268, 22);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Motivo de la consulta";
-            // 
-            // txtMotivo
-            // 
-            this.txtMotivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMotivo.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
-            this.txtMotivo.Location = new System.Drawing.Point(32, 101);
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(406, 106);
-            this.txtMotivo.TabIndex = 27;
-            this.txtMotivo.Text = "";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(501, 39);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(290, 22);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Registro de la consulta";
-            // 
-            // txtRegistro
-            // 
-            this.txtRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRegistro.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F);
-            this.txtRegistro.Location = new System.Drawing.Point(505, 64);
-            this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(311, 143);
-            this.txtRegistro.TabIndex = 24;
-            this.txtRegistro.Text = "";
-            // 
-            // dtpConsulta
-            // 
-            this.dtpConsulta.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dtpConsulta.Enabled = false;
-            this.dtpConsulta.Font = new System.Drawing.Font("Copperplate Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpConsulta.Location = new System.Drawing.Point(258, 45);
-            this.dtpConsulta.Name = "dtpConsulta";
-            this.dtpConsulta.Size = new System.Drawing.Size(146, 25);
-            this.dtpConsulta.TabIndex = 8;
-            this.dtpConsulta.Value = new System.DateTime(2023, 12, 2, 0, 0, 0, 0);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(25, 45);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(227, 22);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Fecha de consulta";
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::proyectoGS.Properties.Resources.Capa_0;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 512);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Font = new System.Drawing.Font("Copperplate Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(907, 569);
+            this.btnAgregar.Location = new System.Drawing.Point(825, 532);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(93, 23);
-            this.btnAgregar.TabIndex = 29;
+            this.btnAgregar.Size = new System.Drawing.Size(93, 40);
+            this.btnAgregar.TabIndex = 38;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnCancelar
+            // textApellido
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Font = new System.Drawing.Font("Copperplate Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(900, 598);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(107, 23);
-            this.btnCancelar.TabIndex = 30;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.textApellido.Font = new System.Drawing.Font("Copperplate Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textApellido.Location = new System.Drawing.Point(470, 36);
+            this.textApellido.Name = "textApellido";
+            this.textApellido.Size = new System.Drawing.Size(212, 31);
+            this.textApellido.TabIndex = 27;
             // 
-            // pacientes
+            // PacienteNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 751);
-            this.Controls.Add(this.btnCancelar);
+            this.ClientSize = new System.Drawing.Size(971, 600);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "pacientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "pacientes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.pacientes_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "PacienteNuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PacienteNuevo";
+            this.Load += new System.EventHandler(this.PacienteNuevo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -652,8 +553,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,41 +561,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.RichTextBox txtOcupacion2;
+        private System.Windows.Forms.TextBox txtOcupacion1;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.RichTextBox txtOcupacion2;
-        private System.Windows.Forms.TextBox txtOcupacion1;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtPeso;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox txtTipoProblemas;
-        private System.Windows.Forms.TextBox txtMetales;
-        private System.Windows.Forms.TextBox txtOperaciones;
-        private System.Windows.Forms.TextBox txtMedicamentos;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RichTextBox txtRegistro;
-        private System.Windows.Forms.DateTimePicker dtpConsulta;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox txtOtrasOperaciones;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox txtMotivo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
@@ -705,7 +587,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RichTextBox txtOtrasOperaciones;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox txtTipoProblemas;
+        private System.Windows.Forms.TextBox txtMetales;
+        private System.Windows.Forms.TextBox txtOperaciones;
+        private System.Windows.Forms.TextBox txtMedicamentos;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox textApellido;
     }
 }
